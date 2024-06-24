@@ -6,6 +6,8 @@ import PrivateRoute from "./routes/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import Banner from "./pages/contents/Banner";
 import BannerDetail from "./pages/contents/BannerDetail";
+import Transactions from "./pages/transaction/Transactions";
+import TransactionsDetail from "./pages/transaction/TransactionsDetail";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/content/banner" element={<Banner />} />
           <Route path="/content/banner/:id" element={<BannerDetail />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/transactions/:id" element={<TransactionsDetail />} />
         </Route>
       </Routes>
     </ConfigProvider>
