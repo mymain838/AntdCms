@@ -62,8 +62,8 @@ const Dashboard = () => {
                   }
                 />
               }
-              title="sdad"
-              description="sdad"
+              title="첫번째 카드"
+              description="첫번째 카드입니다."
             />
             <div className="absolute bottom-5 right-6 text-[30px]">
               <HeartOutlined />
@@ -88,8 +88,8 @@ const Dashboard = () => {
                   }
                 />
               }
-              title="dsadad"
-              description="sdad"
+              title="두번째 카드"
+              description="두번째 카드입니다."
             />
             <div className="absolute bottom-5 right-6 text-[30px]">
               <HeartTwoTone />
@@ -114,8 +114,8 @@ const Dashboard = () => {
                   }
                 />
               }
-              title="dsadad"
-              description="sdad"
+              title="세번째 카드"
+              description="세번째 카드입니다."
             />
             <div className="absolute bottom-5 right-6 text-[30px]">
               <HeartOutlined />
@@ -235,10 +235,10 @@ const Dashboard = () => {
               className="mt-6"
               mode="alternate"
               items={[
-                { children: "첫 공부 2015-08-20", color: "green" },
-                { children: "웹 구현 2015-08-20" },
+                { children: "첫 공부 2015-02-20", color: "green" },
+                { children: "웹 구현 2015-04-20" },
                 {
-                  children: "첫 리액트 2015-08-20",
+                  children: "첫 리액트 2015-06-20",
                   dot: <InfoCircleTwoTone className="text-xl" />,
                 },
                 { children: "퇴사 2015-09-20" },

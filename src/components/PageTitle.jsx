@@ -9,7 +9,6 @@ const PageTitle = ({ title, desc, addBtn }) => {
             {title}
           </h3>
           <h2 className="font-medium text-[16px] leading-[16px] m-0 text-gray-400 ">
-            {" "}
             {desc}
           </h2>
         </div>

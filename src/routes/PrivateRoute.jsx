@@ -1,4 +1,5 @@
 import {
+  BarChartOutlined,
   BookOutlined,
   CreditCardOutlined,
   HomeFilled,
@@ -8,6 +9,7 @@ import {
   NotificationOutlined,
   SettingOutlined,
   SnippetsOutlined,
+  SolutionOutlined,
   TransactionOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -51,20 +53,40 @@ const items = [
   getItem("Dashboard", "dashboard", <HomeFilled />),
   getItem("컨텐츠 관리", "content", <NotificationOutlined />, [
     getItem("배너", "banner"),
-    getItem("팝업", "popup"),
+    getItem("미디어", "media"),
   ]),
+  getItem("통계 자료", "statistics", <BarChartOutlined />),
   getItem("결제 관리", "transactions", <TransactionOutlined />),
-  getItem("카드 관리", "creditcards", <CreditCardOutlined />),
+  getItem(
+    <div className="text-red-500">카드 관리</div>,
+    "creditcards",
+    <CreditCardOutlined />
+  ),
   getItem("공지사항 관리", "notice", <SnippetsOutlined />),
-  getItem("계정관리", "accounts", <UserOutlined />, [
-    getItem("권한", "myprivileges"),
-    getItem("설정", "settings"),
-  ]),
+  getItem(
+    <div className="text-red-500">사용자관리</div>,
+    "users",
+    <UserOutlined />,
+    [getItem(<div className="text-red-500">최근활동 내역</div>, "recent")]
+  ),
+  getItem(
+    <div className="text-red-500">CMS 계정 관리</div>,
+    "accounts",
+    <SolutionOutlined />,
+    [
+      getItem(<div className="text-red-500">권한</div>, "myprivileges"),
+      getItem(<div className="text-red-500">설정</div>, "settings"),
+    ]
+  ),
 ];
 
 const PrivateRoute = () => {
   const { pathname } = useLocation();
+  console.log(pathname.split("/"));
   const [, main, sub] = pathname.split("/");
+  console.log(main);
+  console.log(sub);
+
   const selected = sub ? [sub, main] : [main];
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
@@ -96,7 +118,17 @@ const PrivateRoute = () => {
           theme="light"
         >
           {!collapsed && (
-            <div style={{ display: "flex", gap: "10px", padding: "30px 38px" }}>
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                padding: "30px 38px",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <BookOutlined
                 style={{ fontWeight: "bold", fontSize: 30, color: "#0575E6" }}
               />

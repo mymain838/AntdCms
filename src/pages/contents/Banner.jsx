@@ -299,7 +299,7 @@ const Banner = () => {
           </Link>
         }
       />
-      <h1>Banner</h1>
+
       <Table
         dataSource={data}
         columns={columns}
